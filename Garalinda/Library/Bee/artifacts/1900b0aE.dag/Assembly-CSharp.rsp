@@ -345,6 +345,7 @@
 "Assets/Scripts/Characters/CharacterBase.cs"
 "Assets/Scripts/Characters/Interactable.cs"
 "Assets/Scripts/Characters/NPCController.cs"
+"Assets/Scripts/Game/BattleSystem.cs"
 "Assets/Scripts/Game/Dialog.cs"
 "Assets/Scripts/Game/DialogManager.cs"
 "Assets/Scripts/Game/EssentialObjects.cs"

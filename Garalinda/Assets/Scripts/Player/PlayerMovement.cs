@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 input;
     public Text alertaText;
 
+    public event Action OnBattle;
+
     Color _orange = new Color(1.0f, 0.64f, 0.0f);
     void Start()
     {
@@ -90,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("CHECK FOR ENCOUNTER");
                 }
                 else{
-                Debug.Log("BATTLE ENCOUNTER");
+                OnBattle();
                 battleCount=0;
                 }
             }
