@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - ObjetosSolidos
+  - "Interacci\xF3n"
+  - Portales
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Map
     uniqueID: 2060769691
+    locked: 0
+  - name: Objetos
+    uniqueID: 1447018597
     locked: 0
   - name: NPC
     uniqueID: 4043929517

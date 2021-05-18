@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c66559ed863f4945bee51b25ad96b89, type: 3}
+  m_Name: Kumostos
+  m_EditorClassIdentifier: 
+  _name: Kumostos
+  _description: El nuevo miembro del grupo.
+  image: {fileID: 21300000, guid: 9d987648130604346b9c1985fc885e66, type: 3}
+  state: 1
+  maxHP: 30
+  maxEnergy: 30
+  attack: 11
+  defense: 6
+  magicAttack: 5
+  magicDefense: 8
+  speed: 9
+  weapon: {fileID: 0}
+  armor: {fileID: 0}
+  accessory1: {fileID: 0}
+  accessory2: {fileID: 0}
+  learnableAbilitiesMain: []
+  learnableAbilitiesSupport: []
