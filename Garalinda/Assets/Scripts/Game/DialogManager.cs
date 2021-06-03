@@ -8,11 +8,12 @@ public class DialogManager : MonoBehaviour
     [SerializeField] GameObject dialogBox;
     [SerializeField] Text text;
     [SerializeField] int lettersPerSecond;
-
     public event Action OnShowDialog;
     public event Action OnCloseDialog;
     public static DialogManager Instance{get; private set;}
-
+    bool skillAux;
+    bool shopAux;
+    NPCController npcAux;
     private void Awake()
     {
         Instance=this;
@@ -22,7 +23,10 @@ public class DialogManager : MonoBehaviour
     int currentLine = 0;
     bool isTyping;
 
-    public void ShowDialog(Dialog dialog){
+    public void ShowDialog(Dialog dialog, bool skill, bool shop, NPCController npc){
+        skillAux=skill;
+        shopAux=shop;
+        npcAux=npc;
         OnShowDialog?.Invoke();
         this.dialog=dialog;
         dialogBox.SetActive(true);
@@ -40,6 +44,14 @@ public class DialogManager : MonoBehaviour
                 currentLine=0;
                 dialogBox.SetActive(false);
            OnCloseDialog?.Invoke();
+                if(skillAux)
+                    npcAux.Skill();
+                if(shopAux)
+                    npcAux.Shop();
+
+            skillAux=false;
+            npcAux=null;
+            shopAux=false;
             }
         }
     }

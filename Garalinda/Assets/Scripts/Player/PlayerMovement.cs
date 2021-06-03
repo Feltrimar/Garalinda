@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     
     }
     void Interact(){
-        var collider = Physics2D.OverlapCircle(transform.position,0.3f, interactableLayer);
+        var collider = Physics2D.OverlapCircle(transform.position,1f, interactableLayer);
         if(collider != null)
         {
             collider.GetComponent<Interactable>()?.Interact();
@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private bool IsWalkable(Vector3 targetPos){
-        if(Physics2D.OverlapCircle(targetPos,0.2f,solidObjectsLayer | interactableLayer) !=null){
+        if(Physics2D.OverlapCircle(targetPos,0.3f,solidObjectsLayer | interactableLayer) !=null){
             return false;
         }
         return true;

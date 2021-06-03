@@ -18,6 +18,7 @@ public class ItemBase : ScriptableObject
     [SerializeField] int magicAttack;
     [SerializeField] int magicDefense;
     [SerializeField] int speed;
+    [SerializeField] int cost;
 
        public string Name{
         get { return _name; }
@@ -57,6 +58,10 @@ public class ItemBase : ScriptableObject
 
     public int Speed{
         get { return speed; }
+    }
+
+    public int Cost{
+        get { return cost; }
     }
 }
 

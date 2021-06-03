@@ -9,7 +9,6 @@ public class CharacterBase : ScriptableObject
     [TextArea]
     [SerializeField] string _description;
     [SerializeField] Sprite image;
-    [SerializeField] BattleState state;
     //Stats
     [SerializeField] int maxHP;
     [SerializeField] int maxEnergy;
@@ -24,6 +23,7 @@ public class CharacterBase : ScriptableObject
     [SerializeField] ItemBase accessory2;
     [SerializeField] List<AbilityLearn> learnableAbilitiesMain;
     [SerializeField] List<AbilityLearn> learnableAbilitiesSupport;
+    [SerializeField] GameObject actualNode;
     public string Name{
         get { return _name; }
     }
@@ -34,10 +34,6 @@ public class CharacterBase : ScriptableObject
 
      public Sprite Image{
         get { return image; }
-    }
-
-    public BattleState State{
-        get { return state; }
     }
 
      public int MaxHP{
@@ -91,6 +87,10 @@ public class CharacterBase : ScriptableObject
 
         public List<AbilityLearn> LearnableAbilitiesSupport{
         get { return learnableAbilitiesSupport; }
+    }
+
+    public GameObject ActualNode{
+        get { return actualNode; }
     }
 
 

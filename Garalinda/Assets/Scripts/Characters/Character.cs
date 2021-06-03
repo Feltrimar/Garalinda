@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character 
+public class Character : MonoBehaviour
 {
-    CharacterBase _base;
-    int level;
+    public CharacterBase _base;
+    public int level;
 
     public int HP {get; set;}
     
     public List<Ability> MainAbilities {get; set;}
     public List<Ability> SupportAbilities {get; set;}
+    public GameObject node;
+    public BattleState state;
     public Character(CharacterBase chbase, int chLevel){
 
         _base=chbase;
         level=chLevel;
         HP = _base.MaxHP;
+
         
         //Asignar habilidades con el nivel
         MainAbilities= new List<Ability>();

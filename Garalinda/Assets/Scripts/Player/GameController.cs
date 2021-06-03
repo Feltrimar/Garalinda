@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle, Dialog}
+public enum GameState { FreeRoam, Battle, Dialog, Menu, CSS, Shop}
 
 public class GameController : MonoBehaviour
 {
@@ -11,6 +11,18 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera worldCamera;
 
     public GameState state;
+    
+    MenuController menuController;
+    CharacterSelection characterSelection;
+    ShopController shop;
+
+    public static GameController Instance{ get; private set;}
+
+    private void Awake(){
+        Instance = this;
+        menuController = GetComponent<MenuController>();
+        characterSelection = GetComponent<CharacterSelection>();
+    }
 
     private void Start(){
         playerMovement.OnBattle += StartBattle;
@@ -21,11 +33,32 @@ public class GameController : MonoBehaviour
             state = GameState.Dialog;
         };
 
+        
         DialogManager.Instance.OnCloseDialog+= () =>
         {
             if(state== GameState.Dialog)
                 state = GameState.FreeRoam;
         };
+
+        ShopController.Instance.OnShowShop+= () =>
+        {
+            state = GameState.Shop;
+        };
+
+        ShopController.Instance.onBack += () => {
+            state=GameState.FreeRoam;
+        };
+
+        menuController.onBack += () => {
+            state=GameState.FreeRoam;
+        };
+
+        characterSelection.onBack += () => {
+            state=GameState.FreeRoam;
+        };
+
+        menuController.onMenuSelected += OnMenuSelected;
+
     }
     
     void StartBattle(){
@@ -43,6 +76,11 @@ public class GameController : MonoBehaviour
     private void Update(){
         if(state==GameState.FreeRoam){
             playerMovement.HandleUpdate();
+
+            if(Input.GetKeyDown(KeyCode.Return)){
+                menuController.OpenMenu();
+                state = GameState.Menu;
+            }
         }
        else if(state==GameState.Battle){
           battleSystem.HandleUpdate();
@@ -50,6 +88,30 @@ public class GameController : MonoBehaviour
        else if(state==GameState.Dialog){
            DialogManager.Instance.HandleUpdate();
        }
+       else if (state == GameState.Menu){
+           menuController.HandleUpdate();
+       }
+       else if (state == GameState.CSS){
+           characterSelection.HandleUpdate();
+       }
+        else if (state == GameState.Shop){
+           ShopController.Instance.HandleUpdate();
+       }
+
     }
     
+    void OnMenuSelected(int selectedItem){
+        if(selectedItem==0){
+            characterSelection.OpenCSSMenu(true,false,false,false);
+            state=GameState.CSS;
+        }
+        if(selectedItem==1){
+            characterSelection.OpenCSSMenu(false,true,false,false);
+            state=GameState.CSS;
+        }
+        if(selectedItem==2){
+            characterSelection.OpenCSSMenu(false,false,true,false);
+            state=GameState.CSS;
+        }
+    }
 }
