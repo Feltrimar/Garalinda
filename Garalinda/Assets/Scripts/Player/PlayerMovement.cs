@@ -16,17 +16,27 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving;
     private Vector2 input;
     public Text alertaText;
+    public PlayerPrefs pp;
+    public Text goldText;
 
     public event Action OnBattle;
 
     Color _orange = new Color(1.0f, 0.64f, 0.0f);
-    void Start()
-    {
+    void Awake(){
+        
+    }
+
+    void Update(){
+        
         
     }
 
     public void HandleUpdate()
-    {
+    {   if(pp==null)
+            pp=GameObject.Find("GlobalVariable").GetComponent<PlayerPrefs>();
+        if(goldText==null)
+            goldText=GameObject.Find("GoldText").GetComponent<Text>();
+        goldText.text=pp.gold.ToString();
         if(!isMoving){
             input.x=Input.GetAxisRaw("Horizontal");
             input.y=Input.GetAxisRaw("Vertical");
@@ -92,8 +102,8 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("CHECK FOR ENCOUNTER");
                 }
                 else{
-                OnBattle();
                 battleCount=0;
+                OnBattle();
                 }
             }
         }

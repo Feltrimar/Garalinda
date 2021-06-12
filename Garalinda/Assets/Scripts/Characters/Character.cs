@@ -6,6 +6,7 @@ public class Character : MonoBehaviour
 {
     public CharacterBase _base;
     public int level;
+    public int experience;
 
     public int HP {get; set;}
     

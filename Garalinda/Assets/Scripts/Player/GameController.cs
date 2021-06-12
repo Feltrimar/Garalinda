@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle, Dialog, Menu, CSS, Shop}
+public enum GameState { FreeRoam, Battle, Dialog, Menu, CSS, Shop, StageSelect}
 
 public class GameController : MonoBehaviour
 {
@@ -74,6 +74,11 @@ public class GameController : MonoBehaviour
     }
 
     private void Update(){
+        if(playerMovement==null){
+            playerMovement=GameObject.Find("Player").GetComponent<PlayerMovement>();}
+
+
+    
         if(state==GameState.FreeRoam){
             playerMovement.HandleUpdate();
 

@@ -10,16 +10,23 @@ public class NodeWorldMap : MonoBehaviour
   public NodeWorldMap nodeDown;
   public NodeWorldMap nodeRight;
   public NodeWorldMap nodeLeft;
+  public NodeWorldMap Instance { get; private set;}
   public string _name;
   public GameObject player;
+  public GameObject playerAux;
   public int sceneToLoad;
   public Text canvasText;
+void Awake(){
+    Instance = this;
+}
+
+
 void Update(){
     nodeMovement();
      if(Input.GetKeyDown(KeyCode.X)){
             if(player!=null){
-
        SceneManager.LoadSceneAsync(sceneToLoad);
+       
                 }
             }   
         }
@@ -60,5 +67,7 @@ void nodeMovement(){
         canvasText.text=nodeRight._name;}
         }
     }
+
+
 }
 }

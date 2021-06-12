@@ -9,7 +9,7 @@ public class NPCController : MonoBehaviour, Interactable
   [SerializeField] Dialog dialog;
   public bool skill;
   public bool shop;
-  public Character character;
+  public CharacterBase character;
   bool able;
   public PlayerPrefs player;
   public GameObject tile;
@@ -21,6 +21,7 @@ public class NPCController : MonoBehaviour, Interactable
 
   public List<Character> characters;
     private void Awake(){
+        player=GameObject.Find("GlobalVariable").GetComponent<PlayerPrefs>();;
         characters.AddRange(player.battleCharacters);
         characters.AddRange(player.reserveCharacters);
     }
@@ -32,7 +33,7 @@ public class NPCController : MonoBehaviour, Interactable
 
   public void Skill()
   {
-    if(characters.Contains(character)){  
+    if(CheckPower()){  
       DialogManager.Instance.ShowDialog(dialogAuxYes, false, false, this);
       tile.SetActive(false);
       }
@@ -46,5 +47,15 @@ public class NPCController : MonoBehaviour, Interactable
   {
      // DialogManager.Instance.ShowDialog(dialogAuxShop, false, false, this);
       ShopController.Instance.StartShop(this);
+  }
+
+  public bool CheckPower(){
+    able=false;
+    for (int i=0; i<characters.Count; i++){
+            if(characters[i]._base==character){
+              able=true;
+              break;}
+        }
+    return able;
   }
 }

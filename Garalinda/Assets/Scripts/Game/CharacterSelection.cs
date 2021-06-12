@@ -20,6 +20,7 @@ public event Action onBack;
     public List<GameObject> nodes;
     public Character characterOnSelect;
     [SerializeField] Dialog dialogAuxYes;
+    [SerializeField] Dialog dialogAuxSpace;
     bool characterBool;
     bool itemBool;
     bool formationBool;
@@ -29,6 +30,7 @@ public event Action onBack;
         characters.AddRange(pp.battleCharacters);
         characters.AddRange(pp.reserveCharacters);
         menuItems = menu.GetComponentsInChildren<Text>().ToList();
+        pp=GameObject.Find("GlobalVariable").GetComponent<PlayerPrefs>();   
     }
    public void OpenCSSMenu(bool charactersBool, bool itemsBool, bool formationsBool, bool nodesBool){
        characterBool=charactersBool;
@@ -77,20 +79,32 @@ public event Action onBack;
         if(Input.GetKeyDown(KeyCode.X)){
             
             if(nodeBool){
+                if(characterOnSelect.state==BattleState.Reserva && pp.battleCharacters.Count==3){
+                    CloseCSSMenu();   
+                    DialogManager.Instance.ShowDialog(dialogAuxSpace, false, false, null);
+                }else if(selectedItem==10&&pp.battleCharacters.Count<2){
+                    CloseCSSMenu();   
+                    DialogManager.Instance.ShowDialog(dialogAuxSpace, false, false, null);
+               }else{
                 if(!OccupiedNode(nodes[selectedItem])){
                characterOnSelect.node=nodes[selectedItem];
                if(selectedItem==9){
                    characterOnSelect.state=BattleState.Apoyo;
+               }else if(selectedItem==10&&pp.battleCharacters.Count>1){
+                   characterOnSelect.state=BattleState.Reserva;
+                   characterOnSelect.node=null;
                }else{
                    characterOnSelect.state=BattleState.Principal;
                     }
+                pp.GetOrderedCharacters();
                 CloseCSSMenu();    
                }
                else{
                 CloseCSSMenu();
                 DialogManager.Instance.ShowDialog(dialogAuxYes, false, false, null);
-               }
+            }
                 }
+                    }
             if(formationBool){
                 characterOnSelect=characters[selectedItem];
                 OpenCSSMenu(false,false,false,true);}

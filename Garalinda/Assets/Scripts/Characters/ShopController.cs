@@ -20,8 +20,10 @@ public class ShopController : MonoBehaviour
     [SerializeField] Dialog dialogAuxNo;
     [SerializeField] Dialog dialogAuxBye;
     void Awake(){
+        
         Instance=this;
         menuItems = shopBox.GetComponentsInChildren<Text>().ToList();
+        pp=GameObject.Find("GlobalVariable").GetComponent<PlayerPrefs>();
 
     }
 
