@@ -53288,7 +53288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
       propertyPath: m_LocalPosition.x
@@ -53771,6 +53771,54 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 2043444185}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[0]
+      value: 
+      objectReference: {fileID: 7737498299682271041}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[1]
+      value: 
+      objectReference: {fileID: 7737498298930049761}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[2]
+      value: 
+      objectReference: {fileID: 7737498299901265544}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[3]
+      value: 
+      objectReference: {fileID: 7737498298632958886}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[4]
+      value: 
+      objectReference: {fileID: 7737498298888073270}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[5]
+      value: 
+      objectReference: {fileID: 7737498299712946259}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[6]
+      value: 
+      objectReference: {fileID: 7737498298417529894}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[7]
+      value: 
+      objectReference: {fileID: 7737498298100854551}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[8]
+      value: 
+      objectReference: {fileID: 7737498298925311648}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[9]
+      value: 
+      objectReference: {fileID: 7737498299937413859}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[10]
+      value: 
+      objectReference: {fileID: 7737498298729826446}
     - target: {fileID: 4317548611001303791, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
       propertyPath: m_Name
       value: GameController
@@ -53781,84 +53829,6 @@ PrefabInstance:
       objectReference: {fileID: 1884039434}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
---- !u!1001 &1091425856
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3236675810387176171, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: shop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176171, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: dialog.lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176171, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: dialog.lines.Array.data[0]
-      value: "Oye, antes de que te vayas. \xBFHas o\xEDdo hablar de FFXIV?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176171, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: dialog.lines.Array.data[1]
-      value: "Ahora tiene una prueba gratuita que incluye hasta nivel 60 con la aclamada
-        expansi\xF3n Heavensward"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176171, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: dialog.lines.Array.data[2]
-      value: Yo pensaba que me llamaba Williarmo...
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -21.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 27.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176175, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236675810387176180, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
-      propertyPath: m_Name
-      value: NPC Prueba (8)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 35f79eed71211b843bb892e222d8e778, type: 3}
 --- !u!1001 &1198254262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56556,7 +56526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7737498298925311679}
   m_Layer: 0
-  m_Name: Node Ally DownRight
+  m_Name: Node Ally Down R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

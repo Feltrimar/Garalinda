@@ -19,6 +19,7 @@ public class ItemBase : ScriptableObject
     [SerializeField] int magicDefense;
     [SerializeField] int speed;
     [SerializeField] int cost;
+    // aplicable solo en objetos de apoyo
     [SerializeField] bool healItem;
     [SerializeField] bool energyItem;
     [SerializeField] int healing;

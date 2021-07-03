@@ -45,6 +45,12 @@ public class BattleSystem : MonoBehaviour
 
 
     private void OnEnable(){
+        state=InBattleState.Start;
+        currentAction=0;
+        currentMove=0;
+        currentCharacterInt=0;
+        currentTarget=0;
+        currentItem=0;
         money=0;
         dialogBox.EnableDialogText(true);
         dialogBox.EnableActionSelection(false);
@@ -228,7 +234,7 @@ public class BattleSystem : MonoBehaviour
         dialogBox.UpdateFormationSelection(currentFormation);
 
         if(Input.GetKeyDown(KeyCode.X)){
-            if(currentItem<availableAllyNodes.Count()){
+            if(currentFormation<availableAllyNodes.Count()){
             StartCoroutine(SwapFormation());
             }
         }
@@ -545,21 +551,21 @@ public class BattleSystem : MonoBehaviour
         {
             textStats[2].text=pp.battleCharacters[2].name+": "+pp.battleCharacters[2].HP+" - "+pp.battleCharacters[2].Energy;}
 
-        textStats[3].text=enemies[0].GetComponent<Character>().name+": "+enemies[0].GetComponent<Character>().HP+" - "+enemies[0].GetComponent<Character>().Energy;
+        textStats[3].text=enemies[0].GetComponent<Character>()._base.Name+": "+enemies[0].GetComponent<Character>().HP+" - "+enemies[0].GetComponent<Character>().Energy;
         if(enemies.Count()<2)
             textStats[4].text="";
         else{
-            textStats[4].text=enemies[1].GetComponent<Character>().name+": "+enemies[1].GetComponent<Character>().HP+" - "+enemies[1].GetComponent<Character>().Energy;}
+            textStats[4].text=enemies[1].GetComponent<Character>()._base.Name+": "+enemies[1].GetComponent<Character>().HP+" - "+enemies[1].GetComponent<Character>().Energy;}
         
         if(enemies.Count()<3)
             textStats[5].text="";
         else{
-            textStats[5].text=enemies[2].GetComponent<Character>().name+": "+enemies[2].GetComponent<Character>().HP+" - "+enemies[2].GetComponent<Character>().Energy;}
+            textStats[5].text=enemies[2].GetComponent<Character>()._base.Name+": "+enemies[2].GetComponent<Character>().HP+" - "+enemies[2].GetComponent<Character>().Energy;}
 
         if(enemies.Count()<4)
             textStats[6].text="";
         else{
-            textStats[6].text=enemies[3].GetComponent<Character>().name+": "+enemies[3].GetComponent<Character>().HP+" - "+enemies[3].GetComponent<Character>().Energy;}
+            textStats[6].text=enemies[3].GetComponent<Character>()._base.Name+": "+enemies[3].GetComponent<Character>().HP+" - "+enemies[3].GetComponent<Character>().Energy;}
     }
     
 }

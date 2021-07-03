@@ -20241,7 +20241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 645019831}
   m_Layer: 0
-  m_Name: Node Enemy DownRight
+  m_Name: Node Enemy Down R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

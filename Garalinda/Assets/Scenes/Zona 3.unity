@@ -64775,6 +64775,54 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 44382593}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[0]
+      value: 
+      objectReference: {fileID: 7737498298247079684}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[1]
+      value: 
+      objectReference: {fileID: 7737498299537488548}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[2]
+      value: 
+      objectReference: {fileID: 7737498298029248205}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[3]
+      value: 
+      objectReference: {fileID: 7737498299296398307}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[4]
+      value: 
+      objectReference: {fileID: 7737498299579332723}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[5]
+      value: 
+      objectReference: {fileID: 7737498298216384534}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[6]
+      value: 
+      objectReference: {fileID: 7737498300049853539}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[7]
+      value: 
+      objectReference: {fileID: 7737498299829675858}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[8]
+      value: 
+      objectReference: {fileID: 7737498299541040869}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[9]
+      value: 
+      objectReference: {fileID: 7737498298528928422}
+    - target: {fileID: 4317548611001303787, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
+      propertyPath: nodes.Array.data[10]
+      value: 
+      objectReference: {fileID: 7737498299200946379}
     - target: {fileID: 4317548611001303791, guid: e9d841159cdd88c4585cbe9f00b7cebb, type: 3}
       propertyPath: m_Name
       value: GameController
@@ -70262,7 +70310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7737498299541040890}
   m_Layer: 0
-  m_Name: Node Ally DownRight
+  m_Name: Node Ally Down R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71003,7 +71051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7737498299831651133}
   m_Layer: 0
-  m_Name: Node Enemy DownRight
+  m_Name: Node Enemy Down R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
